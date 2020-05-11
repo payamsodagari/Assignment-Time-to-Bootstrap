@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+        <title>Sign in</title>
+        <link rel="shortcut icon" type="image/jpg" href="images/logo.jpg">
+    </head>
+    <body>
+        <div class="wrapper active-element">
+            <header class="main-header">
+                <nav>
+                    <div class="masthead active-element">
+                        <h1><img src="images/logo.jpg" alt="logo" width="50" height="50">WEB DV</h1>
+                        <div id="menu-toggle" class="menu-toggle active-element">
+                            <div class="one"></div>
+                            <div class="two"></div>
+                            <div class="three"></div>
+                        </div>
+                    </div>
+                    <div class="main-nav-list active-element">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="sign_in.html">Sign in</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </header>
+        </div>
+        <div class="container">
+            <div class="card">
+                <div class="card-body">
+                    <h2>Please Fill This form</h2>
+                    <div class="msg"></div>
+                    <form class="form-group">
+                        <div class="form-row">
+                            <div class="col">
+                                <label for="firstName">First name</label>
+                                <span style="color: red">*</span>
+                                <input id="firstName" type="text" name="firstName" class="form-control firstName"
+                                    placeholder="First name">
+                            </div>
+                            <div class="col">
+                                <label for="lastName">Last name</label>
+                                <span style="color: red">*</span>
+                                <input id="lastName" type="text" name="lastName" class="form-control lastName"
+                                    placeholder="Last name">
+                            </div>
+                        </div>
+                        <label for="EditorGender"></label>
+                        <select class="custom-select" id="EditorGender">
+                            <option selected>-- Select your Gender --</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Other">Other</option>
+                        </select>
+                        <br>
+                        <label for="Editor"></label>
+                        <select class="custom-select" id="Editor">
+                            <option selected>-- Select your editor --</option>
+                            <option value="Visual Studio">Visual Studio</option>
+                            <option value="Sublime">Sublime</option>
+                            <option value="NotPad++">NotPad++</option>
+                        </select>
+                        <button type="submit" class="btn btn-primary" id="sub">Submit</button>
+                        <ul id="users"></ul>
+                    </form>
+                </div>
+            </div>
+        </div>
+            <footer class="footer-copyright text-center py-4">
+                    Copyright &copy; 2020 Payam Website
+            </footer>
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <script src="main2.js"></script>
+    </body>
+</html>

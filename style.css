@@ -1,0 +1,142 @@
+* {
+    box-sizing: border-box;
+    padding: 0px 2px 0px 2px; 
+    border: 0; 
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    width: 100%;
+}
+
+ul {
+    list-style: none;
+}
+ul li{
+    padding: 5px;
+    margin: 5px;
+    background: #f4f4f4;
+    border-radius: 18px;
+    opacity: 0.8;
+}
+header {
+    background: #f4f4f4;
+    padding: 1rem;
+    text-align: center;
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    border: 0;
+    background: #333;
+    color: #fff;
+    border-radius: 5px;
+    margin: 5px 0;
+}
+
+.error {
+    background:#FF0000;
+    color: #fff;
+    padding: 5px;
+    margin: 5px;
+}
+/* ------------------- */
+.masthead{
+    position: relative;
+    z-index: 1000;
+    width: 100%;
+    align-items: baseline;
+    display: flex;
+    justify-content: space-between;
+}
+.menu-toggle{
+    cursor: pointer;
+    width: 50px;
+    z-index: 3;
+}
+.menu-toggle div{
+    background-color: rgb(31, 5, 5);
+    border-radius: 25px;
+    box-shadow: 0px 3px 13px rgba(0,0,0,.3);
+    height: 7px;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(.13,.24,.35,1.64);
+}
+.menu-toggle .one,
+.menu-toggle .two{
+    margin-bottom: 7px;
+}
+/************* Style and animate the nav overlay ***********************/
+.main-nav-list::before,
+.main-nav-list::after{
+    background-color:#64cddb;
+    content:"";
+    position: absolute;
+    top: 0;
+    height: 13vh;
+    width: 0vw;
+    transition: all 100ms ease-in-out 300ms;
+}
+.main-nav-list::before{
+    left: 0;
+}
+.main-nav-list::after{
+    right: 0;
+}
+.main-nav-list ul{
+    position: absolute;
+    top: -30%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition-duration: 300ms;
+    transition-timing-function: ease-in-out;
+    z-index: 2000;
+}
+.main-nav-list a{
+    display: block;
+    font-size: 2rem;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+    opacity: 0;
+    text-align: center;
+    text-transform: uppercase;
+    transition-delay: 130ms;
+}
+
+/************* Style the nav elements when active. ***********************/
+.masthead.active h1{
+    text-shadow: 0px 3px 3px rgba(0,0,0,.4);
+}
+.menu-toggle.active .one{
+    box-shadow: 0px 3px 13px rgba(0,0,0,.4);
+    transform: translate(0, 14px) rotate(45deg);
+}
+.menu-toggle.active .two{
+    background-color: transparent;
+    box-shadow: none;
+    transform: translateX(-55px);
+}
+.menu-toggle.active .three{
+    box-shadow: 0px 3px 13px rgba(0,0,0,.4);
+    transform: translate(0,-14px) rotate(-45deg);
+}
+.main-nav-list.active::before,
+.main-nav-list.active::after{
+    width: 44vw;
+}
+.main-nav-list.active ul{
+    top: 27%;
+    transition-delay: 560ms;
+    transition-duration: 240ms;
+    transition-timing-function: cubic-bezier(.1, .2, .3, 1.4);
+}
+.main-nav-list.active a{
+    transition-delay: 600ms;
+    opacity: 1;
+}
+
+footer {
+    margin-top: 180px;
+}
